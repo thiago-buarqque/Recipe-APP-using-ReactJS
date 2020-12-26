@@ -1,0 +1,94 @@
+@import './StyledVariables.scss';
+
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', 'Roboto', 'Nunito', sans-serif;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    color: $color-text;        
+}
+
+a{
+    &:link, &:visited{ color: $color-main-text; }
+    &:active{ color: $color-highlight; }
+}
+
+.icon{
+    fill: $color-icons;
+}
+
+.title{
+    font-family: 'Nunito', sans-serif;
+    color: $color-main-text;
+}
+
+button, input{
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited, a:active{
+    color: $color-text;
+}
+
+// Loading container for search/recipe pages
+.loading_container{
+    width: 100%;
+    height: 100%;
+    max-height: calc(100vh - 65px);
+    z-index: 5;
+    background: rgba(255,255,255,0.7);
+    margin: 0 auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 1;
+    transition: opacity 1s ease-out 1s; 
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+
+    > img{
+        width: 70px;
+        height: 70px;
+
+        @media screen and (min-width: 800px){
+            width: 100px;
+            height: 100px;
+        } 
+    }
+}
+// Append classes
+.remove_user_select{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hide_loading_container{
+    opacity: 0 !important;
+    pointer-events: none !important;
+}

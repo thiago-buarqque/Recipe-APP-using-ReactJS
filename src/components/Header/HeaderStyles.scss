@@ -1,0 +1,92 @@
+@import '../../StyledVariables.scss';
+
+header{
+    width: 100%;
+    height: 65px;
+    border-bottom: 1px solid #ECECEC;
+
+    display: flex !important;
+    justify-content: space-between;
+
+    padding: 18px 15px 0 15px;
+
+    > div#header_logo_container{
+        > img#header_logo{
+            width: 9.375em;
+            height: 2em;
+        }
+    }
+
+    > div#header_search_container{
+        position: relative;
+        border-bottom: 1px solid $color-highlight;
+        height: 30px;
+        max-width: 50%;
+        padding: 0;
+
+
+        > input{
+            border: none;
+            font-size: 14px;
+            color: $color-text;
+            height: 30px;
+            max-width: calc(100% - 22px);
+            background: none;
+            outline: none;
+
+            &::placeholder{
+                color: $color-text;
+            }
+
+            @media screen and (min-width: 1400px){
+                font-size: 16px;
+            }
+        }
+
+        > button#btn_search_recipe{
+            position: absolute;
+            right: 2px;
+            top: calc(50% - 9px);
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            
+            > #search_icon{
+                width: 18px;
+                height: 18px;
+            }
+        }
+
+        
+    }
+
+    @media screen and (min-width: $start-mobile-screen){
+        padding: 18px 30px 0 30px;
+
+        > div#header_logo_container{
+            width: calc(50% + 4.69em);
+            display: flex;
+            justify-content: flex-end;
+
+            > img#header_logo{
+                width: 9.375em;
+                height: 2em;
+            }
+        }
+
+        > div#header_search_container{
+            width: 250px;
+            > input{     
+                width: calc(250px - 22px);
+                &::placeholder{
+                    color: $color-text;
+                }
+            }
+        }
+    }
+}
+
+// Append classes
+.invalidSearchInput{
+    border-bottom: 1px solid $color-heart-filled !important;
+}

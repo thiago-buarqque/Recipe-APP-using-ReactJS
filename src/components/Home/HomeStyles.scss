@@ -1,0 +1,105 @@
+@import '../../StyledVariables.scss';
+
+.text_highlight{
+    color: $color_highlight;
+}
+
+#home_container{
+    overflow: auto;
+    max-height: calc(100vh - 65px);
+
+    main{
+        max-width: 1100px;
+        margin: 0 auto;
+        min-height: 50%;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    
+        padding-top: 30px;
+    
+        @media screen and (min-width: $start-mobile-screen){
+            flex-direction: row;              
+        }
+    
+        > img#main__main_image{
+            width: 100%;
+    
+            @media screen and (min-width: $start-mobile-screen){
+                width: 60%;            
+                max-width: 760px;
+            }
+        }
+    
+        > div#main__content{
+            max-width: 90%;
+            margin: 0 auto;
+    
+            @media screen and (min-width: $start-mobile-screen){
+                  
+                margin: 0 0 0 15px;        
+            }
+    
+            > p#main__main_text{
+                font-size: 2.2rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                margin-top: 0px;
+    
+                @media screen and (min-width: 600px){
+                    font-size: 3rem;                
+                }
+    
+                @media screen and (min-width: $start-mobile-screen){
+                    font-size: 3.3rem;                
+                }
+    
+                @media screen and (min-width: $start-desktop-screen){
+                    margin-top: 50px;         
+                }
+            }    
+            > span{
+                font-size: 18px;
+                color: $color-main-text;
+                font-weight: 500;
+    
+                @media screen and (min-width: 600px){
+                    font-size: 20px;                
+                }
+            }
+        }
+    }
+    
+    section{
+        display: flex;
+        padding: 60px 10px 30px 0;
+        max-width: 1100px;
+        margin: 0 auto;
+    
+        @media screen and (min-width: $start-mobile-screen){
+            padding: 90px 10px 30px 0;              
+        }
+    
+        > img#section1__image{
+            width: 50%;
+            max-width: 500px;
+        }
+    
+        > p{
+            font-size: 1.5rem;
+            font-weight: bold;
+            @media screen and (min-width: 600px){
+                font-size: 2rem;                
+            }
+            @media screen and (min-width: $start-mobile-screen){
+                font-size: 2.5rem;                
+            }
+            @media screen and (min-width: $start-desktop-screen){
+                font-size: 3rem;                
+            }
+        }
+    }
+    
+}
+

@@ -1,0 +1,213 @@
+@import '../../StyledVariables.scss';
+
+$color-filter-section: #262626;
+
+#filters_container{
+    background: #F2F2F2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @media screen and (min-width: $start-desktop-screen){
+        height: 100%;
+        width: 30%;
+        min-width: 250px;
+        max-width: 300px;
+    }
+
+    > button#btn_apply_filters{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        padding: 12px 0;
+        cursor: pointer;
+
+        border-bottom: 1px solid #d4d4d4;
+
+        > img{
+            width: 18px;
+            height: 18px;
+
+            color: $color-icons;
+        }
+
+        > span#btn_apply_filters_msg{
+            color: $color-filter-section;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 16px;
+            font-family: 'Nunito', sans-serif !important;
+
+            margin-left: 8px;
+        }
+    }
+
+    >div#filters_body{
+        width: 100%;
+        // 115px = 65px from page header + 50px from filters_header
+        min-height: calc(100vh - 115px);
+        display: none;
+
+        padding: 20px 15px 0 15px;
+
+        div.filters__checkBox_container{
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+
+            > div.filters__checkBox_parent{
+                position: relative;
+
+                .div_checkBox{
+                    width: 15px;
+                    height: 15px;
+                    border: 2px solid $color-text;
+                    background: none;
+                    cursor: pointer;
+                    position: absolute;
+                    left: 2px;
+                    top: 3px;
+                }
+
+                > input[type="checkbox"]{
+                    opacity: 0;
+                    border: none;
+                    z-index: 2;
+                    cursor: pointer;
+                    height: 16px;
+                    width: 16px;
+                    position: relative;
+                    left: -2px;
+                }
+
+            }
+            
+            > span.filters__checkBox__span{
+                font-family: 'Nunito', sans-serif;
+                font-weight: 600;
+                color: $color-text;
+                letter-spacing: 1px;
+            }
+        }
+
+        > div#filters__categories_section{
+            width: 100%;
+    
+            >div#filters__categories_body{
+                max-width: 150%;
+                overflow-x: scroll;
+                display: grid;
+                grid-template-columns: 50% 50% 50%;
+
+                padding-bottom: 8px;                               
+            }     
+        }
+
+        // Section #Ingredients
+        > div#filters__ingredients_section{
+            > div#filters__ingredients_body{
+                > div#filters__ingredients_search_container{
+                    position: relative;
+                    border-bottom: 1px solid $color-highlight;
+                    height: 30px;
+                    padding: 0;
+            
+            
+                    > input#filters__ingredients_input_search{
+                        border: none;
+                        font-size: 14px;
+                        color: $color-text;
+                        height: 30px;
+                        max-width: calc(100% - 22px);
+                        font-weight: 500;
+            
+                        &::placeholder{
+                            color: $color-text;
+                        }
+                    }
+            
+                    > button#btn_search_ingredient{
+                        position: absolute;
+                        right: 2px;
+                        top: calc(50% - 9px);
+                        width: 18px;
+                        height: 18px;
+                        cursor: pointer;
+                        z-index: 1;
+                        > #filters__search_icon{
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                }
+
+                > div#filters__ingredients_currentIngredients{
+                    width: 100%;
+                    padding: 8px 0;
+
+                    > div.current_ingredient{
+                        width: auto;
+                        display: flex;
+                        align-items: center;
+                        margin-bottom: 4px;
+
+                        > button.filters__btn_remove_ingredient{
+                            width: 16px;
+                            height: 16px;
+
+                            > svg{
+                                width: 16px;
+                                height: 16px;
+                            }
+                        }
+
+                        > span{
+                            margin-left: 4px;
+                            font-family: 'Nunito', sans-serif;
+                            font-weight: 600;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+
+        > div#filters__nationalities_section{
+            width: 100%;
+
+            >div#filters__nationalities_body{
+                max-width: 150%;
+                overflow-x: scroll;
+                display: grid;
+                grid-template-columns: 50% 50% 50%;
+
+                padding-bottom: 8px;
+
+                
+            }
+        }
+
+        // 
+        h6.filters__section_title{
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            color: $color-filter-section;
+            margin: 0 0 15px 0;
+            letter-spacing: 0.15em;
+        }
+        
+    } // End filters body
+
+} // End filters container
+// Append classes
+.filters_body_opened{
+    display: inherit !important;
+}
+
+.div_checkBox__checked{
+    background: #58C0E1 !important;
+}
