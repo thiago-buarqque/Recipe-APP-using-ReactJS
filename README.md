@@ -1,7 +1,7 @@
 
 
-# Foodyou (English)
-[Veja a versão em Português](#foodyou-%28portuguese%29)
+# Foodyou (English version)
+[Veja a versão em Português](#foodyou-%28português%29)
 
 ReactJS App with the aim of providing culinary recipes to the user. All recipes are provided by [TheMealDB](https://www.themealdb.com/api.php) through the developer license.
 
@@ -24,7 +24,7 @@ In this section I describe what my goal was with the realization of this portfol
 
 > The goal was to learn how to create a way to search for items / products in a website. The objective was successfully achieved. The improvement of this skill continues in the next projects.
 
-# Foodyou (Português)
+# Foodyou (Versão em Português)
 ReactJS App com o objetivo de fornecer receitas culinárias para o usuário. Todas as receitas são fornecidas por [TheMealDB](https://www.themealdb.com/api.php) através da licença de desenvolvedor. 
 
 **Declarações:**
