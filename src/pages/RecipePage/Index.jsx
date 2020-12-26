@@ -8,8 +8,10 @@ import {fetchRecipe} from '../../Search'
 
 import LoadingImg from '../../images/loading.svg'
 
-const RecipePage = (props) => {
+const RecipePage = (props) => {    
     const {recipe} = useParams()
+
+    document.title = recipe
 
     const result = useRef(null)
     const [fetched, setFetched] = useState(false)

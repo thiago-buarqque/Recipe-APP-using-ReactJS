@@ -4,6 +4,7 @@ import MainImage from '../../images/people-cooking-kitchen.jpg'
 import Section1Image from '../../images/deconstructed-food.jpg'
 
 function Home() {
+  document.title = 'foodyou'
   return (
     <div id="home_container">
       <main>

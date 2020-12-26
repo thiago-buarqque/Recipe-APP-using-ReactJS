@@ -68,10 +68,12 @@ header{
             display: flex;
             justify-content: flex-end;
 
-            > img#header_logo{
-                width: 9.375em;
-                height: 2em;
-            }
+            > a{
+                > img#header_logo{
+                    width: 9.375em;
+                    height: 2em;
+                }
+            }            
         }
 
         > div#header_search_container{

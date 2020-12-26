@@ -1,7 +1,7 @@
 import './HeaderStyles.scss'
 
 import { useRef} from 'react'
-import { useHistory} from 'react-router-dom'
+import { Link, useHistory} from 'react-router-dom'
 
 import Logo from '../../images/logo.svg'
 import { ReactComponent as IconSearch } from '../../images/search.svg'
@@ -36,7 +36,7 @@ const Header = () => {
   const handleSearch = (e) => {    
     if(e.key === 'Enter' || e.type === 'click'){
         if(refInputSearch.current.value.trim().length !== 0)
-            history.push(`/s/${refInputSearch.current.value.toLowerCase()}`)
+            history.push(`/s/${refInputSearch.current.value.trim()}`)
         else if(!refSearchContainer.current.classList.contains('invalidSearchInput'))    
             refSearchContainer.current.classList.add('invalidSearchInput')
     }
@@ -49,7 +49,9 @@ const Header = () => {
   return (
     <header>
       <div id="header_logo_container">
-        <img src={Logo} id="header_logo" title="foodyou" alt="Logo foodyou"/>
+        <Link to="/">
+          <img src={Logo} id="header_logo" title="foodyou" alt="Logo foodyou"/>
+        </Link>
       </div>
         <div ref={refSearchContainer} id="header_search_container">
             <input ref={refInputSearch}

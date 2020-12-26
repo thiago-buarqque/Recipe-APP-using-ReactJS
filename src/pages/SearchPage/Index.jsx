@@ -12,6 +12,8 @@ import LoadingImg from '../../images/loading.svg'
 const SearchPage = (props) => {
     let { searchContent } = useParams()
 
+    document.title = `Search "${searchContent}"` || 'foodyou'
+
     const refLoading = useRef(null)
 
     const lastSearchContent = useRef('')
@@ -19,9 +21,9 @@ const SearchPage = (props) => {
     const [fetched, setFetched] = useState(false)
 
     const fetchSearch = async() => {
-        if (searchContent && searchContent !== lastSearchContent.current && !fetched) {
-            lastSearchContent.current = searchContent
-            search(searchContent)                
+        if (searchContent && searchContent.toLowerCase() !== lastSearchContent.current && !fetched) {
+            lastSearchContent.current = searchContent.toLowerCase()
+            search(searchContent.toLowerCase())                
             .then(data => {
                 let auxSearchResult = []
                 if(data[0].meals)
