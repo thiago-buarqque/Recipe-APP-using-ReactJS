@@ -49,8 +49,6 @@ const SearchPage = (props) => {
         return false
     }
 
-    fetchSearch()
-
     const LoadingContainer = (_props) => {
         return (
         <div ref={refLoading} className="loading_container">
@@ -62,32 +60,37 @@ const SearchPage = (props) => {
         return(
             <div id="search_main_container">
                 {
+                    fetched && searchResult ? 
                     searchResult.map( (recipe, i) => 
                         <RecipeItem 
                         key={i}
                         recipe={recipe}/>
-                    )      
+                    ) : ``
                 }
             </div>
         )
     }
 
+    // Random recipe fields
+    const randomRecipe = useRef(null)
+    const [fetchedRandomRecipe, setFetchedRandomRecipe ] = useState(null)
+
     const NoRecipesFound = (_props) =>{
         // Show a "no recipes message" and a random recipe suggestion
-        const randomRecipe = useRef(null)
-        const [fetchedRandomRecipe, setFetchedRandomRecipe ] = useState(null)
 
         const getARandomRecipe = async() => {
             if(fetchedRandomRecipe) return null
             await fetchRandomRecipe()
             .then(data => {
-                console.log(data)
                 randomRecipe.current = data.meals[0]
                 setFetchedRandomRecipe(true)
             })
         }
 
-        getARandomRecipe()
+        useEffect( ()=>{
+            if(!fetchedRandomRecipe)
+                getARandomRecipe()
+        } )
 
         return(
             <div id="no_results_container">
@@ -109,6 +112,9 @@ const SearchPage = (props) => {
         setFetched(false)
 
     useEffect(()=>{
+        if(!fetched)
+            fetchSearch()
+
         if(fetched)
             refLoading.current.classList.add('hide_loading_container')
         else
