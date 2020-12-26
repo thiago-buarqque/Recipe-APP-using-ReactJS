@@ -1,7 +1,7 @@
 
 
 # Foodyou (English version)
-[Veja a versão em Português](#foodyou-%28português%29)
+[Veja a versão em Português](#foodyou-%28versão-em-português%29)
 
 ReactJS App with the aim of providing culinary recipes to the user. All recipes are provided by [TheMealDB](https://www.themealdb.com/api.php) through the developer license.
 
