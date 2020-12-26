@@ -36,7 +36,7 @@ const Header = () => {
   const handleSearch = (e) => {    
     if(e.key === 'Enter' || e.type === 'click'){
         if(refInputSearch.current.value.trim().length !== 0)
-            history.push(`/s/${refInputSearch.current.value.trim()}`)
+            history.push(`/s/${refInputSearch.current.value.trim().toLowerCase()}`)
         else if(!refSearchContainer.current.classList.contains('invalidSearchInput'))    
             refSearchContainer.current.classList.add('invalidSearchInput')
     }

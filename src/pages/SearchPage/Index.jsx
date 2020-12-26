@@ -21,9 +21,9 @@ const SearchPage = (props) => {
     const [fetched, setFetched] = useState(false)
 
     const fetchSearch = async() => {
-        if (searchContent && searchContent.toLowerCase() !== lastSearchContent.current && !fetched) {
-            lastSearchContent.current = searchContent.toLowerCase()
-            search(searchContent.toLowerCase())                
+        if (searchContent && searchContent !== lastSearchContent.current && !fetched) {
+            lastSearchContent.current = searchContent
+            search(searchContent)                
             .then(data => {
                 let auxSearchResult = []
                 if(data[0].meals)
