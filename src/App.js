@@ -3,7 +3,7 @@ import './App.scss'
 import {Route, Switch} from 'react-router'
 
 import Header from './components/Header/Index'
-import Home from './components/Home/Index'
+import Home from './pages/Home/Index'
 import SearchPage from './pages/SearchPage/Index'
 import RecipePage from './pages/RecipePage/Index'
 import NotFoundPage from './pages/NotFoundPage/Index'

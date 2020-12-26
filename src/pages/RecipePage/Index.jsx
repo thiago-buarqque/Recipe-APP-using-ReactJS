@@ -61,7 +61,7 @@ const RecipePage = (props) => {
     const LoadingContainer = (_props) => {
         return (
         <div ref={refLoading} className="loading_container">
-            <img src={LoadingImg} className="icon loading_img"/>
+            <img src={LoadingImg} className="icon loading_img" alt="Loading..."/>
         </div>
     )}
 
@@ -91,7 +91,7 @@ const RecipePage = (props) => {
                 <div id="recipe_page__recipe_tags">
                     {
                         result.current.strYoutube ? 
-                        <p id="str_help">Need help? See the <a href={result.current.strYoutube} target="_blank" id="link_recipe_video" className="remove_user_select">recipe video</a></p>
+                        <p id="str_help">Need help? See the <a href={result.current.strYoutube} target="_blank" rel="noreferrer" id="link_recipe_video" className="remove_user_select">recipe video</a></p>
                         : ``
                     }                    
                     {         

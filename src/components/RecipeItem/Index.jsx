@@ -10,8 +10,8 @@ const RecipeItem = (props) =>{
         let tags = recipe.strTags.split(',')       
         strTags += ' - ' 
         if(tags.length > 0)
-            tags.forEach( (tag, i) => { strTags += (i == 0 ? "" : ", ") + tag })
-        else if(tags.length == 0)
+            tags.forEach( (tag, i) => { strTags += (i === 0 ? "" : ", ") + tag })
+        else if(tags.length === 0)
             strTags = tags[0]
     }
 
