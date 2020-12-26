@@ -11,9 +11,11 @@ header{
     padding: 18px 15px 0 15px;
 
     > div#header_logo_container{
-        > img#header_logo{
-            width: 9.375em;
-            height: 2em;
+        > a{
+            > img#header_logo{
+                width: 9.375em;
+                height: 2em;
+            }
         }
     }
 
@@ -58,6 +60,18 @@ header{
         }
 
         
+    }
+
+    @media screen and (max-width: 400px){
+        > div#header_logo_container{
+            > a{
+                > img#header_logo{
+                    width: 8em;
+                    height: 1.75em;
+                    margin-top: 5px;
+                }
+            }
+        }
     }
 
     @media screen and (min-width: $start-mobile-screen){
