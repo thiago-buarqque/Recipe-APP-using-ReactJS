@@ -1,12 +1,12 @@
 
 
 
-# 🍲 Foodyou (English version)
-[Também disponível em Português](#🍲-foodyou-português)
+# 🍲 Foodyou - English version
+[Também disponível em Português](#🍲-foodyou---versão-em-português)
 
 ReactJS App with the aim of providing culinary recipes to the user. All recipes are provided by [TheMealDB](https://www.themealdb.com/api.php) through the developer license.
 
-**Declarations:** 
+**⚠️Legal informations⚠️** 
  - **The project has no financial objectives.** 
  -  **The name of the APP is fictitious, any similarity to reality is coincidence.** 
  -  **If TheMealDB does not want me to use its services for the purposes of this project, please send me an email:**  thiago.buarqque@gmail.com
@@ -25,10 +25,10 @@ In this section I describe what my goal was with the realization of this portfol
 
 > The goal was to learn how to create a way to search for items / products in a website. The objective was successfully achieved. The improvement of this skill continues in the next projects.
 
-# 🍲 Foodyou-Português
+# 🍲 Foodyou - Versão em Português
 ReactJS App com o objetivo de fornecer receitas culinárias para o usuário. Todas as receitas são fornecidas por [TheMealDB](https://www.themealdb.com/api.php) através da licença de desenvolvedor. 
 
-**Declarações:**
+**⚠️Informações legais⚠️**
  - **O projeto não possui objetivos financeiros.**
  - **O nome do APP é fictício, qualquer semelhança com a realidade é coincidência.**
  - **Se a TheMealDB não quiser que eu utilize seus serviços para os fins desde projeto, por favor me envie um e-mail:** thiago.buarqque@gmail.com
@@ -47,7 +47,5 @@ Nesta seção descrevo qual era meu objetivo com a realização deste projeto de
 
 > O objetivo era aprender a criar uma forma de buscar itens/produtos num
 > website. O objetivo foi alcançado com sucesso. O aprimoramento desta habilidade segue nos próximos projetos.
-
-> This fiel was written with [StackEdit](https://stackedit.io/).
 
 
